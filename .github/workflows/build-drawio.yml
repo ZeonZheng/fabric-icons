@@ -1,0 +1,32 @@
+name: Generate draw.io Fabric Libraries
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - refactor/organized-icon-catalog
+    paths:
+      - 'scripts/build-drawio-libraries.py'
+      - '.github/workflows/build-drawio.yml'
+      - 'icons-ms-official/svg/**'
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Generate categorized custom libraries
+        run: python scripts/build-drawio-libraries.py
+      - name: Commit generated libraries
+        run: |
+          git add -A drawio/ms-official/
+          if ! git diff --cached --quiet; then
+            git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit -m "assets: generate Microsoft Fabric draw.io libraries"
+            git push
+          fi
