@@ -12,6 +12,71 @@ workloads:
   - industry_solutions
   - graph_intelligence
   - purview
-items:
-  - graph_model
-  - graph_queryset
+categories:
+  'Data Integration':
+    - copy_job
+    - dataflow
+    - dataflow_gen2
+    - external_dataflow
+    - pipeline
+    - streaming_dataflow
+    - variable_library
+  'Data Engineering & Storage':
+    - environment
+    - lakehouse
+    - mirrored_catalog
+    - mirrored_generic_database
+    - mirrored_generic_storage
+    - notebook
+    - spark_job_direction
+    - sql_database
+    - user_data_functions
+  'Real-Time Intelligence':
+    - event_house
+    - eventstream
+    - kql_database
+    - kql_queryset
+    - kql_script
+    - real_time_dashboard
+  'Analytics & BI':
+    - dashboard
+    - datamart
+    - external_datamart
+    - external_semantic_model
+    - metric_sets
+    - mobile_report
+    - model
+    - no_access_semantic_model
+    - paginated_report
+    - rdl_report
+    - report
+    - restricted_report
+    - restricted_scorecard
+    - scorecard
+    - semantic_model
+    - shared_semantic_model
+    - streaming_semantic_model
+  'AI & Data Science':
+    - data_agent
+    - experiments
+    - feature_store
+    - operations_agent
+  'Governance & Other Fabric Items':
+    - action
+    - apps
+    - cohort
+    - custom_streaming_connector
+    - data_quality
+    - exploration
+    - fabric_apps
+    - generic_placeholder
+    - graph_model
+    - graph_queryset
+    - healthcare
+    - links
+    - ontology
+    - planning
+    - retail
+    - runtime_lineage
+    - schema_model
+    - sustainability
