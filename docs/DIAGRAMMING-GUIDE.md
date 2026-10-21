@@ -26,13 +26,11 @@ The XML libraries embed their SVG data; a shape does not depend on a third-party
 
 diagrams.net can load a GitHub raw XML library via a `clibs=U` URL parameter. [Its custom library documentation](https://www.drawio.com/docs/manual/shapes/public-custom-libraries/) explains the supported URL form.
 
-Example for the **Fabric workloads** library **after the changes are merged to `main`**:
+Example for the **Fabric workloads** library:
 
 ```text
 https://app.diagrams.net/?splash=0&clibs=Uhttps%3A%2F%2Fraw.githubusercontent.com%2FZeonZheng%2Ffabric-icons%2Fmain%2Fassets%2Fmicrosoft%2Fxml%2F01-fabric-workloads.xml
 ```
-
-While the changes are in PR #1, the local download/import workflow is the simplest and least branch-dependent.
 
 ## Use SVGs in PowerPoint
 
