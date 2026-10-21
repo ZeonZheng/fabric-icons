@@ -28,21 +28,23 @@ A ready-to-use collection of **Microsoft Fabric icons, draw.io shape libraries a
 
 ## Collections
 
-| Collection | What's inside | Open |
-| --- | --- | --- |
-| **NPM — categorized SVG** | **1,670 SVGs**, arranged by workload, item type and UI function | [Browse by folder](assets/npm/) · [Visual gallery](catalog/README.md) |
-| **Microsoft — official icon pack** | **1,584 SVG + 1,584 PNG** from Microsoft's `Icons.zip`, plus 16 generated draw.io XML libraries | [SVG](assets/microsoft/svg/) · [PNG](assets/microsoft/png/) |
-| **FabricToolset — community pack** | **390 original files** (SVGs, draw.io libraries, template and preview images) + bundled license | [Original README & examples](assets/fabrictoolset/README.md) · [SVG collections](assets/fabrictoolset/svg/) |
+**Where to start:** For **draw.io diagrams**, begin with FabricToolset's ready-made XML libraries; use the Microsoft-derived XML libraries when you need more Fabric-specific shapes. For **PowerPoint**, start with official Microsoft SVG icons (or PNG when SVG is unsuitable). Use NPM for additional Fabric UI and item-level variants.
 
-The collections are separated by **source/provenance**, not presented as identical or interchangeable official releases.
+| Collection | Best for | What's inside | Open |
+| --- | --- | --- | --- |
+| **FabricToolset — community pack** | **draw.io first choice** | **390 original files**: 7 XML libraries, SVGs, diagram templates and previews, plus the bundled license | [Draw.io XML](assets/fabrictoolset/xml/) · [Original guide & previews](assets/fabrictoolset/README.md) · [SVG](assets/fabrictoolset/svg/) |
+| **Microsoft — official icon pack** | **PowerPoint first choice** · draw.io alternative | **1,584 SVG + 1,584 PNG** from Microsoft's `Icons.zip`, plus **16 community-generated** draw.io XML libraries | [SVG](assets/microsoft/svg/) · [PNG](assets/microsoft/png/) · [Draw.io XML](assets/microsoft/xml/README.md) |
+| **NPM — categorized SVG** | Detailed Fabric UI and item icons | **1,670 SVGs**, organized by workload, item type and UI function | [Browse folders](assets/npm/) · [Visual gallery](catalog/README.md) |
+
+These collections have different origins and licensing considerations; they are not interchangeable official releases. See [Sources & Attribution](docs/REFERENCES.md).
 
 ## Import libraries into draw.io
 
-| Library | Use case | Open |
+| Library | When to use | Open |
 | --- | --- | --- |
-| **Microsoft-derived XML libraries** | **16 small, community-generated shape libraries** (at most 40 shapes each), grouped for easier diagrams | [Browse workload libraries](assets/microsoft/xml/README.md) |
-| **FabricToolset community** | Original curated Azure Core, Fabric Core, Artifacts, Datasources, Black and other libraries | [Browse original XML libraries](assets/fabrictoolset/xml/) |
-| **Starter template** | Prearranged Fabric architecture icon template | [Open diagram template](assets/fabrictoolset/template/Microsoft%20Fabric%20Icon%20Pack.drawio) |
+| **1. FabricToolset XML — recommended first** | Ready-made Fabric, Azure and data-source palettes for architecture diagrams | [Browse 7 XML libraries](assets/fabrictoolset/xml/) · [Usage examples](assets/fabrictoolset/README.md) |
+| **2. Microsoft-derived XML — alternative** | Smaller, category-based Fabric palettes; 16 XML libraries with at most 40 shapes each | [Browse Microsoft XML libraries](assets/microsoft/xml/README.md) |
+| **Starter diagram template** | Start from a prearranged diagram instead of a blank canvas | [Open Fabric template](assets/fabrictoolset/template/Microsoft%20Fabric%20Icon%20Pack.drawio) |
 
 **Import steps:** Open [diagrams.net](https://app.diagrams.net/) → **File → Open Library from → Device** → select a downloaded `.xml` file. The full [diagramming guide](docs/DIAGRAMMING-GUIDE.md) explains alternative GitHub URL importing, PPT use and best practices.
 
@@ -55,21 +57,24 @@ git clone https://github.com/ZeonZheng/fabric-icons.git
 ```text
 fabric-icons/
 ├── assets/
-│   ├── npm/                  # Categorized NPM SVGs
-│   ├── microsoft/            # Microsoft icon collection
-│   │   ├── svg/              # Official SVG icons
-│   │   ├── png/              # Official PNG icons
+│   ├── fabrictoolset/        # Draw.io libraries, SVGs and templates
+│   │   ├── xml/              # Ready-to-import community libraries
+│   │   ├── svg/              # Community-curated icons
+│   │   └── template/         # Starter diagram and preview
+│   ├── microsoft/
+│   │   ├── svg/              # Official icons for PPT and diagrams
+│   │   ├── png/              # Official raster icons
 │   │   └── xml/              # Generated draw.io shape libraries
-│   └── fabrictoolset/        # Complete community pack (as published)
-├── catalog/                  # Paginated icon preview galleries
-└── docs/                     # Diagramming guide and references
+│   └── npm/                  # Detailed Fabric SVG variants
+├── catalog/                  # Visual icon gallery
+└── docs/                     # Usage guide, sources and references
 ```
 
 This repository is a **static, clone-ready asset snapshot**. There are no checked-in `node_modules`, NPM installation steps, or generation workflows to run.
 
 ## Documentation and sources
 
-- [How to use these icons with draw.io and PowerPoint](docs/DIAGRAMMING-GUIDE.md)
+- [How to use these icons with draw.io, PowerPoint and AI tools](docs/DIAGRAMMING-GUIDE.md)
 - [All original sources, references, attributions and license notes](docs/REFERENCES.md)
 - [Microsoft Learn — Fabric icon usage guidance](https://learn.microsoft.com/en-us/fabric/fundamentals/icons)
 - [FabricToolset original icon pack](https://github.com/astrzala/FabricToolset/tree/main/Microsoft%20Fabric%20%26%20Azure%20Icon%20Pack)
