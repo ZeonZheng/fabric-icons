@@ -3,6 +3,11 @@
   "documentation": "https://learn.microsoft.com/en-us/fabric/fundamentals/icons",
   "zip": "https://github.com/microsoft/fabric-samples/blob/main/docs-samples/Icons.zip",
   "zip_sha256": "fc22e71b0545ed15e22c53f16bf4fb06ffe72daabd3c90a947a6e481c9675e6b",
-  "entry_count": 6346,
-  "note": "Exact source ZIP folder layout preserved. Microsoft icon usage restrictions apply."
+  "note": "Only SVG and PNG icon assets retained; source ZIP program files omitted. Microsoft icon usage restrictions apply.",
+  "asset_count": 3168,
+  "formats": [
+    "svg",
+    "png"
+  ],
+  "source_package_version": "v6.1.0"
 }
