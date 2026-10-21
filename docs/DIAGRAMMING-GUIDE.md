@@ -5,7 +5,7 @@ This repository offers **two separate provenance groups**:
 | Source | Folder | Use |
 | --- | --- | --- |
 | NPM `@fabric-msft/svg-icons` | [`icons/`](../icons/) | Fine-grained UI and item SVGs; organized by functional category and icon family |
-| Microsoft official architecture icon ZIP | [`icons-ms-official/`](../icons-ms-official/) | Official icon pack for architecture diagrams, training material and slide decks; original ZIP folder layout preserved |
+| Microsoft official architecture icon ZIP | [`icons-ms-official/`](../icons-ms-official/) | Official icon pack for architecture diagrams, training material and slide decks; SVG and PNG assets extracted into separate format folders |
 
 Do not mix sources or assume all assets have the same rights. The official icons are Microsoft intellectual property. [Microsoft's terms](https://learn.microsoft.com/en-us/fabric/fundamentals/icons) permit specific uses in architecture diagrams, training materials and documentation; do not crop, distort, rotate or use an icon to represent an unrelated product.
 
@@ -35,7 +35,7 @@ The 2026 reference is useful as a visual directory of current Fabric workloads, 
 ## Updating resources
 
 - NPM assets: `npm install && npm start` (regenerates the `icons/` directory and README catalog).
-- Microsoft official ZIP: `python scripts/sync-ms-official.py` (downloads ZIP and preserves its internal structure in `icons-ms-official/`).
+- Microsoft official ZIP: `python scripts/sync-ms-official.py` (downloads ZIP and extracts SVG/PNG files into format folders in `icons-ms-official/`).
 - Offline or previously downloaded ZIP: `python scripts/sync-ms-official.py --zip path/to/Icons.zip`.
 - The official ZIP checksum and extraction count are written to `sources/microsoft-official.json`.
 
