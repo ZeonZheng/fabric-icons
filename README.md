@@ -11,6 +11,19 @@ A clone-ready collection of Microsoft Fabric SVG and PNG icon resources, organiz
 
 **[Diagramming guide and reference sources](docs/DIAGRAMMING-GUIDE.md)** — Microsoft Learn, Microsoft ZIP, SVG-to-PNG notebook and 2026 community blog.
 
+## Draw.io / diagrams.net — importable icon libraries
+
+You can import ready-made XML shape libraries directly into [diagrams.net](https://app.diagrams.net/). Each library contains embedded SVG content, so you can drag icons onto drawings without relying on image-host URLs.
+
+| Collection | Purpose | Browse |
+| --- | --- | --- |
+| **Microsoft official** | Official Fabric SVGs selected and split into 16 compact libraries (max 40 icons each) | [Official draw.io libraries](drawio/ms-official/README.md) |
+| **FabricToolset community** | Original seven draw.io libraries shown in earlier screenshots; MIT license and attribution preserved | [Community XML libraries](drawio/community-fabrictoolset/) |
+
+**Quick start:** In diagrams.net select **File → Open Library from → Device**, then choose a downloaded `.xml` from one of the links above. Alternatively, load the raw GitHub XML URL with the `clibs=U...` query parameter as described in the [draw.io documentation](https://www.drawio.com/docs/manual/shapes/public-custom-libraries/).
+
+These libraries are distinct from the source SVG/PNG folders; the official library generator is `python scripts/build-drawio-libraries.py`.
+
 ## Clone the library
 
 ```bash
