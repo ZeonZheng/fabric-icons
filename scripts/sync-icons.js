@@ -9,7 +9,7 @@ const config = yaml.load(fs.readFileSync(path.join(root, 'config.yml'), 'utf8'))
 const categories = { workloads: config.workloads || [], ...(config.categories || {}) };
 const assigned = new Map();
 for (const [category, names] of Object.entries(categories)) {
-  const key = category === 'workloads' ? 'workloads' : category.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-');
+  const key = category === 'workloads' ? 'workloads' : category === 'Governance & Other Fabric Items' ? 'governance-other' : category.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-');
   for (const name of names) {
     if (assigned.has(name)) throw new Error('Duplicate icon family: ' + name);
     assigned.set(name, key);
