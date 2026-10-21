@@ -50,6 +50,6 @@ This is the **source registry** for assets in this repository. The repository is
 
 ## Recommended icon selection for architecture diagrams
 
-Use **official Microsoft SVG** for the most consistent product/service representation; use the **FabricToolset community pack** for convenient prearranged draw.io libraries, diagram starter templates, and broader Azure/data-source assets. Use **NPM icon assets** for more detailed Fabric UI and item-level concepts. Keep your diagram's labeling and icon style consistent.
+For **draw.io architecture diagrams**, start with [FabricToolset's ready-made XML libraries](../assets/fabrictoolset/xml/) and [template](../assets/fabrictoolset/template/Microsoft%20Fabric%20Icon%20Pack.drawio); use [Microsoft-derived XML libraries](../assets/microsoft/xml/README.md) when you need smaller or more specific Fabric palettes. For **PowerPoint**, prioritize [official Microsoft SVG assets](../assets/microsoft/svg/) and use [PNG](../assets/microsoft/png/) if SVG is unsuitable. For detailed Fabric UI and item-level variants, consult the [NPM icon gallery](../catalog/README.md). Keep diagram labeling and icon style consistent; the source/usage restrictions above still apply.
 
 [← Home](../README.md) · [Diagramming guide](DIAGRAMMING-GUIDE.md)
