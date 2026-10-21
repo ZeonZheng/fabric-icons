@@ -1,6 +1,6 @@
 # Fabric NPM Icon Catalog
 
-Browse smaller galleries instead of loading hundreds of images in a single README. Original icon files are organized under [`icons/`](../icons/).
+Browse smaller galleries instead of loading hundreds of images in a single README. Original icon files are organized under [`icons/`](../assets/npm/).
 
 | Collection | Icon families | Gallery |
 | --- | ---: | --- |
@@ -18,4 +18,4 @@ Browse smaller galleries instead of loading hundreds of images in a single READM
 | ui/visualization | 23 | [1](ui-visualization-1.md) |
 | workloads | 13 | [1](workloads-1.md) |
 
-[Diagramming guide](../docs/DIAGRAMMING-GUIDE.md) · [Microsoft official SVGs](../icons-ms-official/svg/)
+[Diagramming guide](../docs/DIAGRAMMING-GUIDE.md) · [Microsoft official SVGs](../assets/microsoft/svg/)
