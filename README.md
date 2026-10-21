@@ -15,6 +15,18 @@
 - [Governance & Other Fabric Items](#governance--other-fabric-items) — 16 icon families
 - [UI & Supporting Icons](#ui--supporting-icons) — 342 icon families
 
+## Get the organized icons
+
+Clone the repository and open the **[`icons/`](icons/)** folder — all SVG files are already categorized. No NPM install is required just to use the icons.
+
+```bash
+git clone https://github.com/ZeonZheng/fabric-icons.git
+```
+
+After this pull request is merged, the `main` branch will contain the organized folder structure. Until then, clone the PR branch with `git clone --branch refactor/organized-icon-catalog https://github.com/ZeonZheng/fabric-icons.git`.
+
+To update the SVG collection from the upstream package, use `npm install && npm start`; this refreshes the organized `icons/` folder and the README catalog.
+
 ## Usage
 
 Click a preview to open a representative SVG. See [all SVG files](node_modules/@fabric-msft/svg-icons/svg) for additional sizes and `color`, `filled`, or `regular` variants. This is a community catalog, not an official Microsoft branding guide.
