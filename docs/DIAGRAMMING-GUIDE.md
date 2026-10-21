@@ -4,18 +4,18 @@ This is a short practical guide for architecture diagrams, technical presentatio
 
 ## Choose the right resource
 
-| Need | Start here | Why |
+| Task | Preferred starting point | Alternative or supplement |
 | --- | --- | --- |
-| Browse visually to find an NPM Fabric SVG | [Icon gallery](../catalog/README.md) | Category pages have no more than 60 previews |
-| Select an official icon for PowerPoint or a technical diagram | [Microsoft SVG](../assets/microsoft/svg/) | Vector format stays sharp when resized |
-| Use an official PNG image | [Microsoft PNG](../assets/microsoft/png/) | Useful if a tool cannot import SVG |
-| Add ready-made Fabric shapes to draw.io | [Small Microsoft draw.io libraries](../assets/microsoft/xml/README.md) | Each XML embeds at most 40 icons |
-| Reuse an existing architecture diagram toolkit | [FabricToolset community icon pack](../assets/fabrictoolset/README.md) | Includes SVGs, libraries, template and visual preview |
+| **Draw.io architecture diagram** | **[FabricToolset XML libraries](../assets/fabrictoolset/xml/)** — curated Fabric/Azure/data-source palettes and [starter template](../assets/fabrictoolset/template/Microsoft%20Fabric%20Icon%20Pack.drawio) | [Microsoft-derived XML libraries](../assets/microsoft/xml/README.md) for smaller, category-specific Fabric palettes |
+| **PowerPoint architecture slide** | **[Microsoft official SVGs](../assets/microsoft/svg/)** — crisp vector icons | [Microsoft PNGs](../assets/microsoft/png/) when SVG cannot be used; [FabricToolset SVGs](../assets/fabrictoolset/svg/) for additional architecture components |
+| **Detailed Fabric UI / item icons** | [NPM visual gallery](../catalog/README.md) | [Categorized NPM SVG folders](../assets/npm/) for size and style variants |
+
+This is a practical workflow recommendation, not a claim that community-curated icons are official Microsoft artwork. Check [source and usage terms](REFERENCES.md).
 
 ## Load a library into diagrams.net (draw.io)
 
 1. Open [app.diagrams.net](https://app.diagrams.net/).
-2. From this repository, choose a small XML library in [`assets/microsoft/xml/`](../assets/microsoft/xml/) or the original community [`assets/fabrictoolset/xml/`](../assets/fabrictoolset/xml/).
+2. Start with a [FabricToolset XML library](../assets/fabrictoolset/xml/). If you need a smaller or more targeted Fabric icon set, choose a [Microsoft-derived XML library](../assets/microsoft/xml/README.md).
 3. Download the XML file from GitHub (**Raw → Save**, or **Download raw file**).
 4. In diagrams.net, select **File → Open Library from → Device**, and open the local `.xml`.
 5. The shapes appear in the left-hand palette; drag the required icons to your diagram. Repeat only for the categories you need.
@@ -34,10 +34,26 @@ https://app.diagrams.net/?splash=0&clibs=Uhttps%3A%2F%2Fraw.githubusercontent.co
 
 ## Use SVGs in PowerPoint
 
-1. Browse [Microsoft SVGs](../assets/microsoft/svg/) or [FabricToolset SVGs](../assets/fabrictoolset/svg/).
+1. Start with [Microsoft official SVGs](../assets/microsoft/svg/) for Fabric and Power BI workloads. Use [FabricToolset SVGs](../assets/fabrictoolset/svg/) for additional architecture components.
 2. Download an SVG and insert it in PowerPoint through **Insert → Pictures → This Device**.
 3. Keep the original aspect ratio and colors; put service names in slide text rather than editing product branding.
 4. If SVG is unsupported in your target tool or export workflow, use a PNG from [Microsoft PNG](../assets/microsoft/png/).
+
+## AI-assisted diagramming
+
+When asking an AI coding or diagramming assistant to work with this repository, include the following resource-selection instructions in your prompt:
+
+```text
+Use https://github.com/ZeonZheng/fabric-icons as the icon reference.
+For draw.io diagrams, prefer assets/fabrictoolset/xml/ and its diagram template;
+use assets/microsoft/xml/ for additional or smaller Fabric palettes.
+For PowerPoint, prefer assets/microsoft/svg/ and use PNG only when required.
+Use assets/npm/ for detailed Fabric UI/item icon variants.
+Use actual files from this repository; do not invent icon filenames or links.
+Preserve product branding and follow docs/REFERENCES.md for attribution and terms.
+```
+
+These are selection guidelines, not automated diagram-generation tooling. The repository is a static asset collection; no installation is required.
 
 ## Practical architecture diagram advice
 
