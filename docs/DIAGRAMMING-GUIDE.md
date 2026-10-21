@@ -1,53 +1,60 @@
-# Fabric Icons for Architecture Diagrams and Slides
+# Use Fabric Icons in draw.io and PowerPoint
 
-This repository offers **two separate provenance groups**:
+This is a short practical guide for architecture diagrams, technical presentations and documentation.
 
-| Source | Folder | Use |
+## Choose the right resource
+
+| Need | Start here | Why |
 | --- | --- | --- |
-| NPM `@fabric-msft/svg-icons` | [`icons/`](../icons/) | Fine-grained UI and item SVGs; organized by functional category and icon family |
-| Microsoft official architecture icon ZIP | [`icons-ms-official/`](../icons-ms-official/) | Official icon pack for architecture diagrams, training material and slide decks; SVG and PNG assets extracted into separate format folders |
+| Browse visually to find an NPM Fabric SVG | [Icon gallery](../catalog/README.md) | Category pages have no more than 60 previews |
+| Select an official icon for PowerPoint or a technical diagram | [Microsoft SVG](../assets/microsoft/svg/) | Vector format stays sharp when resized |
+| Use an official PNG image | [Microsoft PNG](../assets/microsoft/png/) | Useful if a tool cannot import SVG |
+| Add ready-made Fabric shapes to draw.io | [Small Microsoft draw.io libraries](../libraries/microsoft/README.md) | Each XML embeds at most 40 icons |
+| Reuse an existing architecture diagram toolkit | [FabricToolset community icon pack](../assets/fabrictoolset/README.md) | Includes SVGs, libraries, template and visual preview |
 
-Do not mix sources or assume all assets have the same rights. The official icons are Microsoft intellectual property. [Microsoft's terms](https://learn.microsoft.com/en-us/fabric/fundamentals/icons) permit specific uses in architecture diagrams, training materials and documentation; do not crop, distort, rotate or use an icon to represent an unrelated product.
+## Load a library into diagrams.net (draw.io)
 
-## Ready-to-import draw.io libraries
+1. Open [app.diagrams.net](https://app.diagrams.net/).
+2. From this repository, choose a small XML library in [`libraries/microsoft/`](../libraries/microsoft/) or the original community [`assets/fabrictoolset/xml/`](../assets/fabrictoolset/xml/).
+3. Download the XML file from GitHub (**Raw → Save**, or **Download raw file**).
+4. In diagrams.net, select **File → Open Library from → Device**, and open the local `.xml`.
+5. The shapes appear in the left-hand palette; drag the required icons to your diagram. Repeat only for the categories you need.
 
-- [Microsoft official icon libraries](../drawio/ms-official/README.md): 380 representative SVG families from the official Microsoft ZIP, split into 16 independent XML libraries, with no more than 40 entries per library. These embedded SVGs avoid requiring external image URLs when you open your diagram later.
-- [FabricToolset community pack — original files, preview and instructions](../drawio/community-fabrictoolset/README.md): seven **unchanged** XML packs including Fabric Core, Fabric Artifacts, Fabric Datasources, Fabric Black, Azure Core, Azure DevOps, and Microsoft Tools & Platforms. Originally published by [Andrzej Strzała](https://github.com/astrzala/FabricToolset) under the included MIT license.
-- In diagrams.net choose **File → Open Library from → Device** and select the downloaded `.xml`, or load GitHub-hosted libraries with a `clibs=U...` URL parameter.
-- For additional shapes, select a different small workload library rather than importing all categories. The original NPM icon collection remains in [`icons/`](../icons/).
+The XML libraries embed their SVG data; a shape does not depend on a third-party image server after loading it.
 
-### Distinguishing sources
+### Alternative: import directly from a URL
 
-The **Microsoft official SVG pack** and the **FabricToolset community draw.io libraries** are not interchangeable in provenance: the latter was assembled and adjusted by a third-party author. Its SVG illustrations may still depict Microsoft intellectual property, so follow Microsoft brand/use conditions in addition to preserving the upstream license notice.
+diagrams.net can load a GitHub raw XML library via a `clibs=U` URL parameter. [Its custom library documentation](https://www.drawio.com/docs/manual/shapes/public-custom-libraries/) explains the supported URL form.
 
-## Recommended workflow
+Example for the **Fabric workloads** library **after the changes are merged to `main`**:
 
-1. For **draw.io / diagrams.net**, choose a product/item SVG from `icons-ms-official/` first, drag it onto the canvas, and label the component next to the icon. Use `icons/` when a matching official diagram asset is unavailable or when documenting UI elements.
-2. For **PowerPoint**, prefer SVG for sharp scaling. If your workflow cannot import SVG, convert to PNG at a suitable resolution without altering proportions.
-3. For **architecture diagrams**, be consistent in using item versus workload icons, and distinguish real data movement, storage and consumption with explicit arrow labels.
-4. For **historical diagrams**, do not automatically swap renamed/retired concepts (AI Skills → Data Agent, Function → User Data Function, Reflex retired) without checking the architecture actually uses the newer item.
+```text
+https://app.diagrams.net/?splash=0&clibs=Uhttps%3A%2F%2Fraw.githubusercontent.com%2FZeonZheng%2Ffabric-icons%2Fmain%2Flibraries%2Fmicrosoft%2F01-fabric-workloads.xml
+```
 
-## Resources and provenance
+While the changes are in PR #1, the local download/import workflow is the simplest and least branch-dependent.
 
-- **Official Microsoft Learn guide, including usage rules:** https://learn.microsoft.com/en-us/fabric/fundamentals/icons
-- **Official Microsoft ZIP:** https://github.com/microsoft/fabric-samples/blob/main/docs-samples/Icons.zip
-- **Microsoft SVG-to-PNG notebook:** https://github.com/microsoft/fabric-samples/blob/main/docs-samples/Icons_SVG_to_PNG.ipynb
-- **NPM source:** https://www.npmjs.com/package/@fabric-msft/svg-icons
-- **Sam Debruyn's May 2026 diagramming reference:** https://debruyn.dev/2026/all-microsoft-fabric-icons-for-diagramming-2026-edition/
+## Use SVGs in PowerPoint
 
-### What the Microsoft notebook does
+1. Browse [Microsoft SVGs](../assets/microsoft/svg/) or [FabricToolset SVGs](../assets/fabrictoolset/svg/).
+2. Download an SVG and insert it in PowerPoint through **Insert → Pictures → This Device**.
+3. Keep the original aspect ratio and colors; put service names in slide text rather than editing product branding.
+4. If SVG is unsupported in your target tool or export workflow, use a PNG from [Microsoft PNG](../assets/microsoft/png/).
 
-`Icons_SVG_to_PNG.ipynb` fetches the latest `@fabric-msft/svg-icons` NPM tarball into a **Fabric Lakehouse**, optionally converts its SVG assets to PNG using CairoSVG (default height: 512px), and writes them to Lakehouse files. It **does not unpack the official `Icons.zip`**. It depends on Fabric notebook utilities and is not intended as a universal desktop image-conversion script.
+## Practical architecture diagram advice
 
-### About the community blog
+- Choose icons **by the actual Fabric item or workload**, not just by visual similarity.
+- Use one consistent library or visual style for key architectural components.
+- Explicitly label the arrows with data transfer direction, connection type, refresh or replication where relevant.
+- Separate sources, ingestion/processing, storage, semantic model, and consumption with clear visual groupings.
+- Avoid showing deprecated names or components as current architecture elements without explaining the environment/version.
+- For a ready-made composition, open the [FabricToolset template](../assets/fabrictoolset/template/Microsoft%20Fabric%20Icon%20Pack.drawio) and adapt it rather than arranging hundreds of icons manually.
 
-The 2026 reference is useful as a visual directory of current Fabric workloads, item types and downloadable SVG/PNG variants. It calls out renamed and deprecated icons. It is **not an official Microsoft distribution or license source**, and its historical assets are not silently merged into the official asset folder.
+## Source authenticity
 
-## Updating resources
+**`assets/microsoft/`** = Microsoft Learn-linked official ZIP.  
+**`assets/npm/`** = NPM published Microsoft Fabric icon package, re-categorized.  
+**`assets/fabrictoolset/`** = third-party curated icon pack by Andrzej Strzała.  
+**`libraries/microsoft/`** = generated diagrams.net libraries from the official ZIP (a community convenience transformation, not an officially published Microsoft library).
 
-- NPM assets: `npm install && npm start` (regenerates the `icons/` directory and README catalog).
-- Microsoft official ZIP: `python scripts/sync-ms-official.py` (downloads ZIP and extracts SVG/PNG files into format folders in `icons-ms-official/`).
-- Offline or previously downloaded ZIP: `python scripts/sync-ms-official.py --zip path/to/Icons.zip`.
-- The official ZIP checksum and extraction count are written to `sources/microsoft-official.json`.
-
-The two update processes are deliberately independent.
+[All sources, update information, and usage terms](REFERENCES.md) · [← Home](../README.md)

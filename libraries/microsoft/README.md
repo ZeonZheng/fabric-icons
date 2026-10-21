@@ -1,7 +1,7 @@
 # Official Microsoft Fabric — diagrams.net Libraries
 
-Generated from the [Microsoft official icon ZIP](../../icons-ms-official/svg/).
-Each XML is self-contained with embedded SVG data, contains at most 40 icons, and can be imported directly into diagrams.net.
+Ready-to-import diagrams.net XML shape libraries generated from the [Microsoft Learn-linked Fabric Icons.zip](https://github.com/microsoft/fabric-samples/blob/main/docs-samples/Icons.zip); original SVGs are available in [`assets/microsoft/svg/`](../../assets/microsoft/svg/).
+Each XML is self-contained with embedded SVG data, contains at most 40 icons, and can be imported directly into diagrams.net. These are community-generated convenience libraries, not official Microsoft diagrams.net downloads.
 
 | Category | Icons | Library |
 | --- | ---: | --- |
@@ -24,6 +24,6 @@ Each XML is self-contained with embedded SVG data, contains at most 40 icons, an
 
 **Total:** 380 representative SVG icon families; all size/style variants remain available in `icons-ms-official/svg/`.
 
-Load a local XML via **File → Open Library from → Device**, or load its GitHub raw URL using the `clibs=U...` parameter.
-The grouped icons are a convenience classification, not an official Microsoft product taxonomy.
+Download any XML and load it via **File → Open Library from → Device**, or load its GitHub raw URL using the `clibs=U...` parameter.
+This grouping is a convenience classification rather than an official Microsoft product taxonomy. For draw.io usage instructions, see the [diagramming guide](../../docs/DIAGRAMMING-GUIDE.md).
 For usage rights and source attribution, see [Diagramming Guide](../../docs/DIAGRAMMING-GUIDE.md).
