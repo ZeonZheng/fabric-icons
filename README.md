@@ -18,7 +18,7 @@ You can import ready-made XML shape libraries directly into [diagrams.net](https
 | Collection | Purpose | Browse |
 | --- | --- | --- |
 | **Microsoft official** | Official Fabric SVGs selected and split into 16 compact libraries (max 40 icons each) | [Official draw.io libraries](drawio/ms-official/README.md) |
-| **FabricToolset community** | Original seven draw.io libraries shown in earlier screenshots; MIT license and attribution preserved | [Community XML libraries](drawio/community-fabrictoolset/) |
+| **FabricToolset community** | Original seven draw.io libraries shown in earlier screenshots; MIT license and attribution preserved | [Full FabricToolset icon pack, preview and instructions](drawio/community-fabrictoolset/README.md) |
 
 **Quick start:** In diagrams.net select **File → Open Library from → Device**, then choose a downloaded `.xml` from one of the links above. Alternatively, load the raw GitHub XML URL with the `clibs=U...` query parameter as described in the [draw.io documentation](https://www.drawio.com/docs/manual/shapes/public-custom-libraries/).
 
