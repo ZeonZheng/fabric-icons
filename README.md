@@ -31,7 +31,7 @@ A ready-to-use collection of **Microsoft Fabric icons, draw.io shape libraries a
 | Collection | What's inside | Open |
 | --- | --- | --- |
 | **NPM — categorized SVG** | **1,670 SVGs**, arranged by workload, item type and UI function | [Browse by folder](assets/npm/) · [Visual gallery](catalog/README.md) |
-| **Microsoft — official icon pack** | **1,584 SVG + 1,584 PNG** from Microsoft's `Icons.zip` | [SVG](assets/microsoft/svg/) · [PNG](assets/microsoft/png/) |
+| **Microsoft — official icon pack** | **1,584 SVG + 1,584 PNG** from Microsoft's `Icons.zip`, plus 16 generated draw.io XML libraries | [SVG](assets/microsoft/svg/) · [PNG](assets/microsoft/png/) |
 | **FabricToolset — community pack** | **390 original files** (SVGs, draw.io libraries, template and preview images) + bundled license | [Original README & examples](assets/fabrictoolset/README.md) · [SVG collections](assets/fabrictoolset/svg/) |
 
 The collections are separated by **source/provenance**, not presented as identical or interchangeable official releases.
@@ -40,7 +40,7 @@ The collections are separated by **source/provenance**, not presented as identic
 
 | Library | Use case | Open |
 | --- | --- | --- |
-| **Official Microsoft** | **16 small XML shape libraries** (at most 40 shapes each), grouped for easier diagrams | [Browse workload libraries](libraries/microsoft/README.md) |
+| **Microsoft-derived XML libraries** | **16 small, community-generated shape libraries** (at most 40 shapes each), grouped for easier diagrams | [Browse workload libraries](assets/microsoft/xml/README.md) |
 | **FabricToolset community** | Original curated Azure Core, Fabric Core, Artifacts, Datasources, Black and other libraries | [Browse original XML libraries](assets/fabrictoolset/xml/) |
 | **Starter template** | Prearranged Fabric architecture icon template | [Open diagram template](assets/fabrictoolset/template/Microsoft%20Fabric%20Icon%20Pack.drawio) |
 
@@ -62,10 +62,11 @@ git clone --branch refactor/organized-icon-catalog https://github.com/ZeonZheng/
 fabric-icons/
 ├── assets/
 │   ├── npm/                  # Categorized NPM SVGs
-│   ├── microsoft/            # Official Microsoft SVG + PNG
+│   ├── microsoft/            # Microsoft icon collection
+│   │   ├── svg/              # Official SVG icons
+│   │   ├── png/              # Official PNG icons
+│   │   └── xml/              # Generated draw.io shape libraries
 │   └── fabrictoolset/        # Complete community pack (as published)
-├── libraries/
-│   └── microsoft/            # Small, ready-to-import draw.io XML libraries
 ├── catalog/                  # Paginated icon preview galleries
 └── docs/                     # Diagramming guide and references
 ```

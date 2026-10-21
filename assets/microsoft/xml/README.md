@@ -1,6 +1,6 @@
-# Official Microsoft Fabric — diagrams.net Libraries
+# Microsoft Fabric — diagrams.net XML Libraries
 
-Ready-to-import diagrams.net XML shape libraries generated from the [Microsoft Learn-linked Fabric Icons.zip](https://github.com/microsoft/fabric-samples/blob/main/docs-samples/Icons.zip); original SVGs are available in [`assets/microsoft/svg/`](../../assets/microsoft/svg/).
+Ready-to-import diagrams.net XML shape libraries generated from the [Microsoft Learn-linked Fabric Icons.zip](https://github.com/microsoft/fabric-samples/blob/main/docs-samples/Icons.zip); original SVGs are available in [`assets/microsoft/svg/`](../svg/).
 Each XML is self-contained with embedded SVG data, contains at most 40 icons, and can be imported directly into diagrams.net. These are community-generated convenience libraries, not official Microsoft diagrams.net downloads.
 
 | Category | Icons | Library |
@@ -22,8 +22,8 @@ Each XML is self-contained with embedded SVG data, contains at most 40 icons, an
 | 09-other-ui | 40 | [09-other-ui-06.xml](09-other-ui-06.xml) |
 | 09-other-ui | 13 | [09-other-ui-07.xml](09-other-ui-07.xml) |
 
-**Total:** 380 representative SVG icon families; all size/style variants remain available in `icons-ms-official/svg/`.
+**Total:** 380 representative SVG icon families; all size/style variants remain available in [`assets/microsoft/svg/`](../svg/).
 
 Download any XML and load it via **File → Open Library from → Device**, or load its GitHub raw URL using the `clibs=U...` parameter.
-This grouping is a convenience classification rather than an official Microsoft product taxonomy. For draw.io usage instructions, see the [diagramming guide](../../docs/DIAGRAMMING-GUIDE.md).
-For usage rights and source attribution, see [Diagramming Guide](../../docs/DIAGRAMMING-GUIDE.md).
+This grouping is a convenience classification rather than an official Microsoft product taxonomy. For draw.io usage instructions, see the [diagramming guide](../../../docs/DIAGRAMMING-GUIDE.md).
+For source attribution and usage rights, see [Sources & References](../../../docs/REFERENCES.md).

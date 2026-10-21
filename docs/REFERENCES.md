@@ -13,7 +13,7 @@ This is the **source registry** for assets in this repository. The repository is
 | [All Microsoft Fabric Icons for Diagramming — 2026 edition](https://debruyn.dev/2026/all-microsoft-fabric-icons-for-diagramming-2026-edition/) | Sam Debruyn | Community overview of diagramming icon naming, availability, format variants and evolution | Reference only; no assets in this repository are claimed to originate from the blog |
 | [FabricToolset](https://github.com/astrzala/FabricToolset) / [icon pack](https://github.com/astrzala/FabricToolset/tree/main/Microsoft%20Fabric%20%26%20Azure%20Icon%20Pack) | **Andrzej Strzała** | Curated SVGs, ready-to-import diagrams.net libraries, starter diagram and example preview | Complete copied directory: [`assets/fabrictoolset/`](../assets/fabrictoolset/) |
 | [FabricToolset original README](../assets/fabrictoolset/README.md) | Andrzej Strzała | Original usage instructions, preview and multi-library loading URL | Preserved as originally published |
-| [diagrams.net / draw.io — Public custom libraries](https://www.drawio.com/docs/manual/shapes/public-custom-libraries/) | diagrams.net | Importing custom shape libraries and opening remote library URLs | Use with [Microsoft XML libraries](../libraries/microsoft/README.md) and [community XML libraries](../assets/fabrictoolset/xml/) |
+| [diagrams.net / draw.io — Public custom libraries](https://www.drawio.com/docs/manual/shapes/public-custom-libraries/) | diagrams.net | Importing custom shape libraries and opening remote library URLs | Use with [Microsoft XML libraries](../assets/microsoft/xml/README.md) and [community XML libraries](../assets/fabrictoolset/xml/) |
 
 ## Folder provenance
 
@@ -30,7 +30,7 @@ This is the **source registry** for assets in this repository. The repository is
 - Source ZIP includes a `v6.1.0` icon package; the repo retains only image formats: **1,584 SVG and 1,584 PNG**.
 - The ZIP also included JS, TypeScript and package metadata that was deliberately excluded from the ready-to-use asset collection.
 - Provenance and ZIP SHA-256: [`microsoft-asset-manifest.json`](microsoft-asset-manifest.json).
-- The official SVG icons are also used to create **small, self-contained** [diagrams.net XML libraries](../libraries/microsoft/).
+- The official SVG icons are also used to create **small, self-contained** [diagrams.net XML libraries](../assets/microsoft/xml/).
 
 ### FabricToolset community pack — `assets/fabrictoolset/`
 

@@ -9,13 +9,13 @@ This is a short practical guide for architecture diagrams, technical presentatio
 | Browse visually to find an NPM Fabric SVG | [Icon gallery](../catalog/README.md) | Category pages have no more than 60 previews |
 | Select an official icon for PowerPoint or a technical diagram | [Microsoft SVG](../assets/microsoft/svg/) | Vector format stays sharp when resized |
 | Use an official PNG image | [Microsoft PNG](../assets/microsoft/png/) | Useful if a tool cannot import SVG |
-| Add ready-made Fabric shapes to draw.io | [Small Microsoft draw.io libraries](../libraries/microsoft/README.md) | Each XML embeds at most 40 icons |
+| Add ready-made Fabric shapes to draw.io | [Small Microsoft draw.io libraries](../assets/microsoft/xml/README.md) | Each XML embeds at most 40 icons |
 | Reuse an existing architecture diagram toolkit | [FabricToolset community icon pack](../assets/fabrictoolset/README.md) | Includes SVGs, libraries, template and visual preview |
 
 ## Load a library into diagrams.net (draw.io)
 
 1. Open [app.diagrams.net](https://app.diagrams.net/).
-2. From this repository, choose a small XML library in [`libraries/microsoft/`](../libraries/microsoft/) or the original community [`assets/fabrictoolset/xml/`](../assets/fabrictoolset/xml/).
+2. From this repository, choose a small XML library in [`assets/microsoft/xml/`](../assets/microsoft/xml/) or the original community [`assets/fabrictoolset/xml/`](../assets/fabrictoolset/xml/).
 3. Download the XML file from GitHub (**Raw → Save**, or **Download raw file**).
 4. In diagrams.net, select **File → Open Library from → Device**, and open the local `.xml`.
 5. The shapes appear in the left-hand palette; drag the required icons to your diagram. Repeat only for the categories you need.
@@ -29,7 +29,7 @@ diagrams.net can load a GitHub raw XML library via a `clibs=U` URL parameter. [I
 Example for the **Fabric workloads** library **after the changes are merged to `main`**:
 
 ```text
-https://app.diagrams.net/?splash=0&clibs=Uhttps%3A%2F%2Fraw.githubusercontent.com%2FZeonZheng%2Ffabric-icons%2Fmain%2Flibraries%2Fmicrosoft%2F01-fabric-workloads.xml
+https://app.diagrams.net/?splash=0&clibs=Uhttps%3A%2F%2Fraw.githubusercontent.com%2FZeonZheng%2Ffabric-icons%2Fmain%2Fassets%2Fmicrosoft%2Fxml%2F01-fabric-workloads.xml
 ```
 
 While the changes are in PR #1, the local download/import workflow is the simplest and least branch-dependent.
@@ -55,6 +55,6 @@ While the changes are in PR #1, the local download/import workflow is the simple
 **`assets/microsoft/`** = Microsoft Learn-linked official ZIP.  
 **`assets/npm/`** = NPM published Microsoft Fabric icon package, re-categorized.  
 **`assets/fabrictoolset/`** = third-party curated icon pack by Andrzej Strzała.  
-**`libraries/microsoft/`** = generated diagrams.net libraries from the official ZIP (a community convenience transformation, not an officially published Microsoft library).
+**`assets/microsoft/xml/`** = generated diagrams.net libraries from the official ZIP (a community convenience transformation, not an officially published Microsoft library).
 
 [All sources, update information, and usage terms](REFERENCES.md) · [← Home](../README.md)
