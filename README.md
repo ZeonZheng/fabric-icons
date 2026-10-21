@@ -4,6 +4,8 @@ A ready-to-use collection of **Microsoft Fabric icons, draw.io shape libraries a
 
 **No installation or build step required.** Clone the repository, browse the folders and use the SVG, PNG or draw.io XML files directly.
 
+**Maintained by [ZeonZheng](https://github.com/ZeonZheng).** Original icon sources, community contributions and licensing information are acknowledged in [Sources & Attribution](docs/REFERENCES.md).
+
 ![Microsoft Fabric diagramming library showcase — preview from FabricToolset](assets/fabrictoolset/template/img/DrawIO_Fabric_Icon_Pack.png)
 
 <sub>Preview image and the curated Fabric & Azure pack by [Andrzej Strzała / FabricToolset](https://github.com/astrzala/FabricToolset), reproduced with attribution. See [sources and licensing notes](docs/REFERENCES.md).</sub>
