@@ -4,6 +4,15 @@
 
 **1670 SVG files** across **414 icon families**. All original assets remain in the upstream package directory.
 
+## Choose your icon source
+
+| Collection | Location | Origin |
+| --- | --- | --- |
+| **NPM SVG library** | [`icons/`](icons/) | [`@fabric-msft/svg-icons`](https://www.npmjs.com/package/@fabric-msft/svg-icons), categorized by Fabric capability |
+| **Official Microsoft diagramming pack** | [`icons-ms-official/`](icons-ms-official/) | [Microsoft Fabric official Icons.zip](https://github.com/microsoft/fabric-samples/blob/main/docs-samples/Icons.zip), with original hierarchy maintained |
+
+**Drawing Fabric architecture diagrams or PowerPoint slides?** Start with the [Diagramming & Sources Guide](docs/DIAGRAMMING-GUIDE.md). This explains permitted usage, source attribution, SVG/PNG options, and the [2026 community icon reference](https://debruyn.dev/2026/all-microsoft-fabric-icons-for-diagramming-2026-edition/).
+
 ## Browse by category
 
 - [Workloads](#workloads) — 13 icon families
