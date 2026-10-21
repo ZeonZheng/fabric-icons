@@ -1,0 +1,48 @@
+name: Import FabricToolset Icon Pack
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - refactor/organized-icon-catalog
+    paths:
+      - '.github/workflows/import-fabrictoolset.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  import-pack:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Checkout upstream source
+        uses: actions/checkout@v4
+        with:
+          repository: astrzala/FabricToolset
+          ref: main
+          path: _fabrictoolset_upstream
+          persist-credentials: false
+      - name: Import complete directory preserving original paths
+        shell: bash
+        run: |
+          set -euo pipefail
+          DEST='drawio/community-fabrictoolset/Microsoft Fabric & Azure Icon Pack'
+          mkdir -p 'drawio/community-fabrictoolset'
+          rm -rf "$DEST"
+          cp -a '_fabrictoolset_upstream/Microsoft Fabric & Azure Icon Pack' "$DEST"
+          cp '_fabrictoolset_upstream/LICENSE' 'drawio/community-fabrictoolset/LICENSE'
+          rm -rf _fabrictoolset_upstream
+          test -f "$DEST/README.md"
+          test -f "$DEST/template/img/DrawIO_Fabric_Icon_Pack.png"
+          test -f "$DEST/xml/Fabric_Artifacts.xml"
+          echo "Imported files: $(find "$DEST" -type f | wc -l)"
+          git add -A 'drawio/community-fabrictoolset/'
+      - name: Commit imported assets if changed
+        run: |
+          if ! git diff --cached --quiet; then
+            git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit -m 'assets: import complete FabricToolset icon pack with original structure'
+            git push
+          fi
