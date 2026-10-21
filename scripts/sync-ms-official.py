@@ -6,6 +6,7 @@ import argparse
 import hashlib
 import json
 import pathlib
+import shutil
 import urllib.request
 import zipfile
 
@@ -25,6 +26,7 @@ def main() -> None:
             data = stream.read()
     import io
     extracted = 0
+    shutil.rmtree(TARGET, ignore_errors=True)
     TARGET.mkdir(exist_ok=True)
     # Preserve the vendor's exact relative paths; reject path traversal.
     with zipfile.ZipFile(io.BytesIO(data)) as archive:
@@ -38,7 +40,9 @@ def main() -> None:
             if rel.as_posix().lower() in names:
                 raise ValueError("Duplicate ZIP entry: " + info.filename)
             names.add(rel.as_posix().lower())
-            output = TARGET.joinpath(*rel.parts)
+            if rel.suffix.lower() not in (".svg", ".png"):
+                continue
+            output = TARGET / rel.suffix.lower().lstrip(".") / rel.name
             output.parent.mkdir(parents=True, exist_ok=True)
             output.write_bytes(archive.read(info))
             extracted += 1
@@ -48,8 +52,10 @@ def main() -> None:
         "documentation": "https://learn.microsoft.com/en-us/fabric/fundamentals/icons",
         "zip": "https://github.com/microsoft/fabric-samples/blob/main/docs-samples/Icons.zip",
         "zip_sha256": hashlib.sha256(data).hexdigest(),
-        "entry_count": extracted,
-        "note": "Exact source ZIP folder layout preserved. Microsoft icon usage restrictions apply."
+        "asset_count": extracted,
+        "formats": ["svg", "png"],
+        "source_package_version": "v6.1.0",
+        "note": "Only image assets are retained (separated into svg/ and png/). Other package files are intentionally omitted. Microsoft icon usage restrictions apply."
     }, indent=2) + "\n", encoding="utf-8")
     print(f"Extracted {extracted} official icons/assets to {TARGET}")
 
