@@ -9,6 +9,17 @@ This repository offers **two separate provenance groups**:
 
 Do not mix sources or assume all assets have the same rights. The official icons are Microsoft intellectual property. [Microsoft's terms](https://learn.microsoft.com/en-us/fabric/fundamentals/icons) permit specific uses in architecture diagrams, training materials and documentation; do not crop, distort, rotate or use an icon to represent an unrelated product.
 
+## Ready-to-import draw.io libraries
+
+- [Microsoft official icon libraries](../drawio/ms-official/README.md): 380 representative SVG families from the official Microsoft ZIP, split into 16 independent XML libraries, with no more than 40 entries per library. These embedded SVGs avoid requiring external image URLs when you open your diagram later.
+- [FabricToolset community libraries](../drawio/community-fabrictoolset/): seven **unchanged** XML packs including Fabric Core, Fabric Artifacts, Fabric Datasources, Fabric Black, Azure Core, Azure DevOps, and Microsoft Tools & Platforms. Originally published by [Andrzej Strzała](https://github.com/astrzala/FabricToolset) under the included MIT license.
+- In diagrams.net choose **File → Open Library from → Device** and select the downloaded `.xml`, or load GitHub-hosted libraries with a `clibs=U...` URL parameter.
+- For additional shapes, select a different small workload library rather than importing all categories. The original NPM icon collection remains in [`icons/`](../icons/).
+
+### Distinguishing sources
+
+The **Microsoft official SVG pack** and the **FabricToolset community draw.io libraries** are not interchangeable in provenance: the latter was assembled and adjusted by a third-party author. Its SVG illustrations may still depict Microsoft intellectual property, so follow Microsoft brand/use conditions in addition to preserving the upstream license notice.
+
 ## Recommended workflow
 
 1. For **draw.io / diagrams.net**, choose a product/item SVG from `icons-ms-official/` first, drag it onto the canvas, and label the component next to the icon. Use `icons/` when a matching official diagram asset is unavailable or when documenting UI elements.
